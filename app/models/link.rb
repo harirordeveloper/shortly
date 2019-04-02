@@ -13,6 +13,8 @@
 
 class Link < ApplicationRecord
 
+  default_scope { order(created_at: :desc) }
+
   EXPIRY_DAYS = 30
 
   validates :original_url, presence: true, url: true
