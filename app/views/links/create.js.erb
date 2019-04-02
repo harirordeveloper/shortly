@@ -1,0 +1,9 @@
+$(".notice").remove();
+<% if @url.valid? %>
+  $('a#shorten-url').attr("href", "<%= short_redirect_url @url.slug %>");
+  $('a#shorten-url').html("<%= short_redirect_url @url.slug %>");
+<% else %>
+  <% @url.errors.each do |key, value| %>
+    $('#errorBlock').append('<div class="notice"><%==j value %></div>');
+  <% end %>
+<% end %>

@@ -1,0 +1,5 @@
+<%= form_for @link, remote: true do |f| %>
+  <%= f.text_field :original_url %>
+  <%= f.submit 'shorten' %>
+  <span id="errorBlock"></span>
+<% end %>
