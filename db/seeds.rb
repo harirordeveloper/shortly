@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Valid link with analytic data
+
+link = Link.create(original_url: 'https://shortlly.herokuapp.com/')
+
+link.analytics.create(user_ip: 'test IP', country: 'India', region: 'Andhra', city: 'Hyderabad')
+
+
+# Expired Link
+
+link = Link.create(original_url: 'https://herokuapp.com/', created_at: 40.days.ago)
+
+link.analytics.create(user_ip: 'test IP', country: 'India', region: 'Andhra', city: 'Hyderabad')
