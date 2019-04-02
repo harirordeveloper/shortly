@@ -5,7 +5,7 @@ class AnalyticsService
 
   def self.track link_rec, user_ip
     @user_ip = user_ip
-    link_rec.analytics.create(geo_loc_obj(user_ip))
+    link_rec.analytics.create(geo_loc_obj)
   end
 
   def self.geo_loc_obj
