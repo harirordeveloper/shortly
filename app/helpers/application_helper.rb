@@ -2,7 +2,7 @@ module ApplicationHelper
   def short_redirect_url slug
     host = case Rails.env
               when 'development' then 'localhost'
-              when 'production'  then  'shortly'
+              when 'production'  then  'shortlly.herokuapp.com'
               when 'test' then 'testshortly'
             end
     options = { host: host }
