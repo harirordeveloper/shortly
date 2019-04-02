@@ -57,3 +57,18 @@ this is currently happening when we are redirecting the user. In future with lot
 2. we need to improve our Random string generation logic. As it may sometimes generate conflicting short url for 2 different URL.
 
 3. with lot of analytics data and lot more links getting created there may be some issues arise with the data accessibility may be a distributed architecture like creating some DB clusters.
+
+This app is deployed on heroku
+
+App URL : https://shortlly.herokuapp.com/
+
+stats URL : https://shortlly.herokuapp.com/links/stats ( Note: as we are using /5character route for redirection purpose. Mounted stats on this path)
+
+
+This is valid URL to test redirection
+
+http://shortlly.herokuapp.com/2u8wv
+
+This is URL which got expired to see 404 page
+
+http://shortlly.herokuapp.com/shm5t
