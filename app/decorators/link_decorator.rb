@@ -1,8 +1,10 @@
 class LinkDecorator < Draper::Decorator
   delegate_all
 
-  def top_countries
-    analytics.pluck(:country).uniq.join(',')
+  %W(country city postal_code).each do |action|
+    define_method("top_#{action.pluralize}") do
+      analytics.pluck(action.to_sym).uniq.join(',')
+    end
   end
 
   def expired?
