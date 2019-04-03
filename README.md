@@ -67,7 +67,7 @@ stats URL : https://shortlly.herokuapp.com/links/stats ( Note: as we are using /
 
 This is valid URL to test redirection
 
-http://shortlly.herokuapp.com/2u8wv
+http://shortlly.herokuapp.com/5cffz
 
 This is URL which got expired to see 404 page
 
